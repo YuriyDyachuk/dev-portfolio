@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
 # Загружаем актуальную версию Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 # Устанавливаем Node
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt-get install -y nodejs
 # Копируем содержимое текущего каталога в рабочую директорию
 COPY . /var/www
