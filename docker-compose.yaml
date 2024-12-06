@@ -24,7 +24,7 @@ services:
   webserver:
     image: nginx:alpine
     container_name: webserver
-    restart: unless-stopped
+    restart: always
     volumes:
       - .:/var/www
       - ./docker/nginx/conf.d:/etc/nginx/conf.d
